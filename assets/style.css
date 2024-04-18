@@ -5,7 +5,6 @@
     --background-dark: #121214;
     --background-light: #414141;
     --text-color: #E7E7E7;
-    --fly-gradient: linear-gradient(to bottom, #3DC7EF, #3DC7EF, #3DC7EF, #BDB9B8, #BDB9B8, #BDB9B8);
 }
 
 .plant{
@@ -20,8 +19,7 @@
     color: white
 }
 .fly{
-    background-image: linear-gradient(to bottom, #3DC7EF, #3DC7EF, #3DC7EF, #BDB9B8, #BDB9B8, #BDB9B8);
-}
+    background: -webkit-linear-gradient( 90deg, #BDB9B8 50%, #3dc7ef 50%);}
 .water{
     background-color: #4592C4;
     color: white;
@@ -29,7 +27,6 @@
 .bug{
     background-color: #729F3F;
     color: white;
-    font-family: poppins;
 }
 
 *{
@@ -44,7 +41,7 @@
 
 body{
     background-image: url("/assets/img/pattern.jpg");
-    background-size: 100%;
+    background-size: auto;
     z-index: 1;
     backdrop-filter: blur(0.2rem);
 }
@@ -177,6 +174,29 @@ header .container{
     margin-right: 10px;
 }
 
+.load-button{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 12px
+}
+#button{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+#button:hover{
+    background-color: var(--text-color);
+    color: #121214;
+    border: 1px solid #121214;
+}
+
 footer{
     margin-top: 2rem;
     background-color: var(--background-dark);
@@ -211,7 +231,7 @@ footer h2,h3{
         height: 38dvh;
     }
     body{
-        background-size: 80%;
+        background-size: auto;
     }
 }
 
@@ -227,6 +247,7 @@ footer h2,h3{
         height: 38dvh;
     }
     body{
+        background-size: auto;
         backdrop-filter: blur(0.6rem);
     }
 }
