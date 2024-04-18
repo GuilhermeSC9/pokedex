@@ -5,6 +5,7 @@
     --background-dark: #121214;
     --background-light: #414141;
     --text-color: #E7E7E7;
+    --fly-gradient: linear-gradient(to bottom, #3DC7EF, #3DC7EF, #3DC7EF, #BDB9B8, #BDB9B8, #BDB9B8);
 }
 
 .plant{
@@ -84,9 +85,48 @@ header .container{
     height: 37dvh;
     max-width: 100%;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 5px 10px 5px 5px;
     transition: 0.3s;
+    position: relative;
 }
+
+.card .fire::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #FD7D24;
+    border-right: 20px solid #FD7D24;
+}
+.card .plant::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #9BCC50;
+    border-right: 20px solid #9BCC50;
+}
+.card .water::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #4592C4;
+    border-right: 20px solid #4592C4;
+}
+.card .bug::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #729F3F;
+    border-right: 20px solid #729F3F;
+}
+
 .card:hover{
     background-color: rgba(209, 209, 209, 0.9);
 }
